@@ -1,0 +1,17 @@
+<div class="background">
+    <div class="login-container">
+        <div class="text-container">
+            <h1>Hola</h1>
+            <p>
+                ¿Quieres crear una cuenta para accedera a esta app?
+                ¡Adelante, haz click en el botón de abajo para registrarte!
+            </p>
+            <button mat-button routerLink="/register">Sign up</button>
+        </div>
+        <div class="form-container">
+            <h1>Bienvenido al LitOral</h1>
+            <h5>Ingresa con tu email</h5>
+            <app-login-form (formData)="login($event)"></app-login-form>
+        </div>
+    </div>
+</div>

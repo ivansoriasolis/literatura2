@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "literatura-71c26": {
+      "hosting": {
+        "literatura2": [
+          "literatura-71c26"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "literatura-71c26"
+  }
+}
