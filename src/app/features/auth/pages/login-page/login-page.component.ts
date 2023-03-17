@@ -13,14 +13,20 @@ export class LoginPageComponent implements OnInit {
   constructor(
     private readonly authService: AuthService,
     private readonly router: Router
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   login(loginData: LoginData) {
     console.log("OK");
     this.authService
       .login(loginData)
+      .then(() => this.router.navigate(['/dashboard']))
+      .catch((e) => console.log(e.message));
+  }
+
+  loginWithGoogle() {
+    this.authService.loginWithGoogle()
       .then(() => this.router.navigate(['/dashboard']))
       .catch((e) => console.log(e.message));
   }

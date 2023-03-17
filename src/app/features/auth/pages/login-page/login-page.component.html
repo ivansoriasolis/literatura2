@@ -6,10 +6,13 @@
                 ¿Quieres crear una cuenta para accedera a esta app?
                 ¡Adelante, haz click en el botón de abajo para registrarte!
             </p>
-            <button mat-button routerLink="/register">Sign up</button>
+            <button mat-button routerLink="/register">Registrarse</button>
         </div>
         <div class="form-container">
             <h1>Bienvenido al LitOral</h1>
+            <button mat-raised-button (click)="loginWithGoogle()">
+                Ingresar con Google
+            </button>
             <h5>Ingresa con tu email</h5>
             <app-login-form (formData)="login($event)"></app-login-form>
         </div>

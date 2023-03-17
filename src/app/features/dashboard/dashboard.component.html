@@ -1,9 +1,9 @@
 <mat-toolbar></mat-toolbar>
-<div class="background">
-  <h1>Welcome to the NgBytes Dashboard</h1>
-  <h2>Built with &lt;3 by Dottech</h2>
+<div class="background" [style.background-image]="'url(assets/pueblo.png)'">
+    <h1>Bienvenido al panel de LitOral</h1>
+    <h2>Construido por Ivan Soria</h2>
 
-  <a target="_blank" class="btn" href="https://github.com/puntotech/ngbytes-fireauth">
-    Click here to view the source code
-  </a>
+    <a target="_blank" class="btn" (click)='logout()'>
+        Salir
+    </a>
 </div>

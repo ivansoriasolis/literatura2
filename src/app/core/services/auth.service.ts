@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Auth, createUserWithEmailAndPassword, signOut } from '@angular/fire/auth';
-import { signInWithEmailAndPassword } from '@firebase/auth';
+import { Auth, createUserWithEmailAndPassword, signInWithPopup, signOut } from '@angular/fire/auth';
+import { GoogleAuthProvider, signInWithEmailAndPassword } from '@firebase/auth';
 import { LoginData } from '../interfaces/login-data.interface';
 
 
@@ -9,17 +9,21 @@ import { LoginData } from '../interfaces/login-data.interface';
 })
 export class AuthService {
 
-  constructor(private auth:Auth) { }
+  constructor(private auth: Auth) { }
 
-  login({email, password}: LoginData){
+  login({ email, password }: LoginData) {
     return signInWithEmailAndPassword(this.auth, email, password);
   }
 
-  register({email, password}: LoginData){
+  loginWithGoogle() {
+    return signInWithPopup(this.auth, new GoogleAuthProvider);
+  }
+
+  register({ email, password }: LoginData) {
     return createUserWithEmailAndPassword(this.auth, email, password);
   }
 
-  logout(){
+  logout() {
     return signOut(this.auth);
   }
 }
