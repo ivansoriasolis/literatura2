@@ -5,14 +5,16 @@ import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard.component';
 
 
+
 @NgModule({
   declarations: [
-    DashboardComponent
+    DashboardComponent,
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
-    MatToolbarModule //barra de tareas de angular material
+    MatToolbarModule, //barra de tareas de angular material
+
   ]
 })
 export class DashboardModule { }

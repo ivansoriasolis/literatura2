@@ -20,6 +20,7 @@ const routes: Routes = [
     // data: { authGuardPipe: redirectUnauthorizedToLogin },
     ...canActivate(redirectUnauthorizedToLogin),
   },
+  { path: 'texto', loadChildren: () => import('./features/texto/texto.module').then(m => m.TextoModule) },
   {
     path: '**', redirectTo: '', pathMatch: 'full',
   },

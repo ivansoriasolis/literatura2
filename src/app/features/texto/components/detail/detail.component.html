@@ -1,0 +1,18 @@
+<div class="detail">
+    <h2>{{ texto.titulo }}</h2>
+    <h4>{{ texto.tipo }} type</h4>
+    <div class="content">
+        <img [src]="texto.tipo" />
+        <div>
+            <p>Height: {{ texto.texto }}</p>
+            <p>Weight: {{ texto.informante }}</p>
+            <p>
+                {{ texto.fuente }}
+            </p>
+        </div>
+    </div>
+    <div>
+        <button (click)="update()" mat-raised-button color="primary">Edit</button>
+        <button (click)="delete()" mat-raised-button color="warn">Delete</button>
+    </div>
+</div>

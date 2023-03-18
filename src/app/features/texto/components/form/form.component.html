@@ -1,0 +1,30 @@
+<form [formGroup]="form">
+    <mat-form-field>
+        <mat-label>Título</mat-label>
+        <input matInput required formControlName="titulo" class="form-control" type="text">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Texto</mat-label>
+        <input matInput required formControlName="texto" class="form-control" type="text" matInput>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Tipo</mat-label>
+        <input matInput required formControlName="tipo" class="form-control" type="text">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Fuente</mat-label>
+        <input matInput required formControlName="fuente" class="form-control" type="text">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Informante</mat-label>
+        <input matInput required formControlName="informante" class="form-control" type="text">
+    </mat-form-field>
+    <!-- <mat-form-field>
+        <mat-label>Image URL</mat-label>
+        <input matInput required formControlName="imgUrl" class="form-control" placeholder="https://charmander.png"
+            type="text" />
+    </mat-form-field> -->
+    <button type="button" mat-raised-button (click)="submit()" color="primary" [disabled]="!form.valid">
+        Enviar
+    </button>
+</form>

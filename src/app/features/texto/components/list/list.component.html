@@ -1,0 +1,14 @@
+<div class="card-container">
+    <mat-card *ngFor="let texto of texto$ | async" (click)="selectTexto(texto)">
+        <mat-card-header>
+            <mat-card-title>{{ texto.titulo }}</mat-card-title>
+            <mat-card-subtitle>{{ texto.texto }}</mat-card-subtitle>
+        </mat-card-header>
+        <!-- <img mat-card-image [src]="texto.imgUrl" alt="Photo of a Pokemon" /> -->
+        <mat-card-content>
+            <p>
+                {{ texto.fuente }}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>

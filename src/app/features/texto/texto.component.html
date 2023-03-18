@@ -1,0 +1,18 @@
+<div class="container">
+    <!-- <div class="header">
+        <img src="assets/NgPokedex.png" />
+    </div> -->
+    <div class="content">
+        <div class="list">
+            <div class="list-header">
+                <h3>Lista de textos</h3>
+                <button mat-raised-button color="primary" (click)="addTexto()">
+                    Agregar texto
+                </button>
+            </div>
+            <app-list [texto$]="allTexto$" (textoEmitter)="selectTexto($any($event))"></app-list>
+        </div>
+        <app-detail [texto]="selectedTexto" *ngIf="selectedTexto" (deleteTexto)="deleteTexto()"
+            (updateTexto)="updateTexto()"></app-detail>
+    </div>
+</div>
