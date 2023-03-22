@@ -1,10 +1,8 @@
-<mat-toolbar>BARRA DE TAREAS</mat-toolbar>
-<h1>holaaa</h1>
-<div class="background" [style.background-image]="'url(assets/pueblo.png)'">
-    <h1>Bienvenido al panel de LitOral</h1>
-    <h2>Construido por Ivan Soria</h2>
-
-    <a target="_blank" class="btn" (click)='logout()'>
-        Salir
-    </a>
+<mat-toolbar>
+    <a mat-button routerLink="texto">Colección de textos</a>
+    <a mat-button routerLink="about">Quienes somos</a>
+    <a mat-button (click)="logout()">Salir</a>
+</mat-toolbar>
+<div class="container-gral">
+    <router-outlet></router-outlet>
 </div>

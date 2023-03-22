@@ -1,14 +1,3 @@
-h1 {
-    color: #5eccd6;
-    font-size: 50px;
-    font-weight: bolder;
-}
-
-h2 {
-    color: #698893;
-    margin-bottom: 50px;
-}
-
 a {
     color: #5eccd6;
     border-bottom: 2px solid transparent;
@@ -19,6 +8,10 @@ mat-toolbar {
     background-color: transparent;
     display: flex;
     justify-content: right;
+}
+
+.container-gral {
+    align-items: center;
 }
 
 .background {
@@ -46,4 +39,20 @@ a:hover {
 
 .btn:hover {
     background-color: #52b7c0;
+}
+
+h1 {
+    color: #5eccd6;
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+h2 {
+    color: #698893;
+    margin-bottom: 50px;
+}
+
+h3 {
+    color: #698893;
+    margin-bottom: 50px;
 }

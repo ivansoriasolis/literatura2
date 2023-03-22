@@ -21,13 +21,13 @@ export class LoginPageComponent implements OnInit {
     console.log("OK");
     this.authService
       .login(loginData)
-      .then(() => this.router.navigate(['/dashboard']))
+      .then(() => this.router.navigate(['/dashboard/texto']))
       .catch((e) => console.log(e.message));
   }
 
   loginWithGoogle() {
     this.authService.loginWithGoogle()
-      .then(() => this.router.navigate(['/dashboard']))
+      .then(() => this.router.navigate(['/dashboard/texto']))
       .catch((e) => console.log(e.message));
   }
 }

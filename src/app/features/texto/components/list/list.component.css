@@ -11,7 +11,7 @@
     flex: 1 0 20%;
     flex-direction: column;
     margin: 5px;
-    max-width: 200px;
+    max-width: 100%;
 }
 
 .card-container mat-card img {

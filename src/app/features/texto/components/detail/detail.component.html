@@ -2,7 +2,6 @@
     <h2>{{ texto.titulo }}</h2>
     <h4>{{ texto.tipo }} type</h4>
     <div class="content">
-        <img [src]="texto.tipo" />
         <div>
             <p>Height: {{ texto.texto }}</p>
             <p>Weight: {{ texto.informante }}</p>
@@ -12,7 +11,7 @@
         </div>
     </div>
     <div>
-        <button (click)="update()" mat-raised-button color="primary">Edit</button>
-        <button (click)="delete()" mat-raised-button color="warn">Delete</button>
+        <button (click)="update()" mat-raised-button color="primary">Editar</button>
+        <button (click)="delete()" mat-raised-button color="warn">Eliminar</button>
     </div>
 </div>
